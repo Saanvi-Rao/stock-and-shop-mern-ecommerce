@@ -1,69 +1,83 @@
-Stock & Shop – E-Commerce System (MERN Stack)
+# Stock & Shop – E-Commerce System (MERN Stack)
 
-Project Overview
-Stock & Shop is a full-stack web-based e-commerce application developed as a Major Project for the Bachelor of Computer Applications (BCA) program. The system provides a secure and efficient platform for online grocery shopping, inventory management, and order processing.
+## Project Overview
+Stock & Shop is a full-stack web-based e-commerce application developed as a Major Project for the Bachelor of Computer Applications (BCA) program. The system is designed to streamline online grocery shopping by providing secure user authentication, real-time inventory management, and reliable online payment processing.
 
-The application supports role-based access for Administrators and Customers and ensures reliable payment handling using Stripe integration.
+The application supports both Administrator and Customer roles and ensures secure order fulfillment using Stripe payment gateway integration.
 
-Features
-User Authentication:
-Secure login and registration
-Forgot password with OTP verification
-Role-based access control (Admin and Customer)
+## Features
+- **Secure User Authentication:**
+  - User Registration and Login
+  - Forgot Password with OTP verification
+  - Role-based access control (Admin and Customer)
 
-Admin Module:
-Category and sub-category management
-Product upload and inventory management
-View orders and customer addresses
+- **Admin Module:**
+  - Add and manage categories
+  - Add and manage sub-categories
+  - Upload and manage products
+  - View customer orders
+  - View saved customer addresses
+  - Monitor and update inventory stock levels
 
-Customer Module:
-Browse products
-Add items to cart
-Checkout and online payment
-View order history
-Manage saved addresses
+- **Customer Module:**
+  - Browse available products
+  - Add products to cart
+  - Checkout and online payment
+  - View order history
+  - Save and manage delivery addresses
 
-Payment and Order Processing:
-Stripe payment gateway integration
-Secure server-side webhook verification
-Automatic order creation
-Inventory update and cart clearance after payment
+- **Payment and Order Management:**
+  - Secure Stripe payment gateway integration
+  - Server-side webhook verification
+  - Automatic order creation after successful payment
+  - Inventory update and cart clearance
 
-Technology Stack
-Frontend: React.js, Redux Toolkit
-Backend: Node.js, Express.js
-Database: MongoDB
-Payment Gateway: Stripe
-Authentication: JWT, Bcrypt, Nodemailer
+## Prerequisites
+To run this application, you need:
+- **Node.js (v18 or above)**
+- **npm**
+- **MongoDB**
+- **Stripe CLI**
 
-Prerequisites
-Node.js (v18 or above)
-npm
-MongoDB
-Stripe CLI
+## Installation
+Follow these steps to set up the project on your local machine:
 
-Installation
-Clone the repository:
-git clone https://github.com/Saanvi-Rao/stock-and-shop-mern-ecommerce.git
-
-Navigate to the project directory:
-cd stock-and-shop-mern-ecommerce
-
-Install dependencies:
-Backend: npm install
-Frontend: npm install
-
-Stripe Webhook Setup
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Saanvi-Rao/stock-and-shop-mern-ecommerce.git
+   ```
+2. **Navigate into the project directory:**
+   ```bash
+   cd stock-and-shop-mern-ecommerce
+   ```
+ 
+3. **Install required dependencies:**
+**Backend:**
+   ```bash
+   npm  install
+   ```
+**Frontend:**
+   ```bash
+   npm  install
+   ```
+## Stripe Webhook Setup
+To enable secure payment confirmation during local development, run:
+```bash
 stripe listen --forward-to localhost:8080/api/webhook/stripe
+```
 
-How to Run the Application
-Start backend server:
-npm run server
-
-Start frontend server:
+**How to Run the Application**
+Start the backend server:
+```bash
 npm run dev
+```
 
-Project Status
-This project is developed for academic purposes as part of the BCA curriculum and is not deployed.
+Start the frontend application:
+```bash
+npm run dev
+```
+The application will be accessible through the local development server in the browser.
 
+**Project Status**
 
+This project is developed strictly for academic purposes as part of the BCA curriculum and is not deployed.
