@@ -1,0 +1,20 @@
+import Axios from '../utils/Axios'
+import SummaryApi from '../common/SummaryApi'
+
+const uploadImage = async (image) => {
+    const formData = new FormData();
+    formData.append('image', image);
+
+    try {
+        const response = await Axios({
+            ...SummaryApi.uploadImage,
+            data: formData
+        });
+
+        return response;
+    } catch (error) {
+        throw error;   
+    }
+};
+
+export default uploadImage;
